@@ -31,9 +31,9 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Tomllint'
-        uses: skr-actions/action-tomllint@master
+        uses: tsigouris007/action-tomllint@master # Or the proper version/tag
         with:
-          tomllint_files: '<toml_file'
+          tomllint_files: '<toml_file(s)>'
           tomllint_comment: true
           tomllint_ruleset: base|recommended|standard # Default standard
         env:
