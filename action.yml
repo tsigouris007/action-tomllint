@@ -1,0 +1,27 @@
+# action.yaml
+name: 'ES TomlLint GitHub Action'
+author: 'GTsigourakos'
+description: 'GitHub action for ESLint and TOML'
+branding:
+  icon: 'sliders'
+  color: 'green'
+inputs:
+  tomllint_files:
+    description: 'The files to do tomllint on'
+    required: true
+    default: ''
+  tomllint_comment:
+    description: 'Comment tomllint output'
+    required: false
+    default: 'false'
+  tomllint_ruleset:
+    description: 'Tomllint ruleset (base, recommended, standard). Default: standard'
+    required: false
+    default: 'standard'
+outputs:
+  tomllint_output:
+    description: 'Output of tomllint'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
